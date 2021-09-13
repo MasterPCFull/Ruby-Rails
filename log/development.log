@@ -1,0 +1,1326 @@
+Started GET "/" for ::1 at 2021-09-08 13:41:33 -0300
+  
+ActiveRecord::NoDatabaseError (Unknown database 'Blog_development'):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/mysql2_adapter.rb:39:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.2) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (60.6ms)[0m  [1m[35mCREATE DATABASE `Blog_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (126.8ms)[0m  [1m[35mCREATE DATABASE `Blog_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for ::1 at 2021-09-08 13:44:21 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 48.9ms | Allocations: 494)
+Completed 200 OK in 119ms (Views: 61.9ms | ActiveRecord: 0.0ms | Allocations: 4012)
+
+
+  [1m[35m (116.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (77.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('511626824538614085', 0)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAnnotations (20210908164732)
+  [1m[35m (74.5ms)[0m  [1m[35mCREATE TABLE `annotations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (49.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210908164732')[0m
+  [1m[36mTRANSACTION (33.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFriends (20210908164904)
+  [1m[35m (131.9ms)[0m  [1m[35mCREATE TABLE `friends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `address` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210908164904')[0m
+  [1m[36mTRANSACTION (190.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-09-08 17:07:56.887458', '2021-09-08 17:07:56.887458')[0m
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('511626824538614085')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-09-08 14:08:34 -0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 63.7ms | Allocations: 494)
+Completed 200 OK in 136ms (Views: 87.5ms | ActiveRecord: 0.0ms | Allocations: 3633)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-09-08 14:09:09 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (Duration: 37.0ms | Allocations: 6690)
+  Rendered /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 33.8ms | Allocations: 1228)
+  Rendered /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 157.1ms | Allocations: 13706)
+  Rendered layout /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb (Duration: 187.0ms | Allocations: 13970)
+Completed 200 OK in 204ms (Views: 198.4ms | ActiveRecord: 0.0ms | Allocations: 15412)
+
+
+Started GET "/annotations" for ::1 at 2021-09-08 14:09:32 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (3.2ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:14
+  Rendered annotations/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1353)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/italo/Documentos/Blog/public/packs
+[Webpacker] Hash: 7d908ca3c3da41a302df
+Version: webpack 4.46.0
+Time: 29680ms
+Built at: 08/09/2021 14:10:15
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+    js/hello_react-d8a8f45684ecb0ea6b21.js   1.09 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-d8a8f45684ecb0ea6b21.js.map   1.26 MiB  hello_react  [emitted] [dev]        hello_react
+                             manifest.json  703 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+Entrypoint hello_react = js/hello_react-d8a8f45684ecb0ea6b21.js js/hello_react-d8a8f45684ecb0ea6b21.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 18 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 43246.3ms | Allocations: 22200)
+Completed 200 OK in 43291ms (Views: 43273.0ms | ActiveRecord: 3.2ms | Allocations: 24303)
+
+
+Started GET "/annotations/new" for ::1 at 2021-09-08 14:12:07 -0300
+Processing by AnnotationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (Duration: 185.1ms | Allocations: 6676)
+  Rendered annotations/new.html.erb within layouts/application (Duration: 193.0ms | Allocations: 7069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 236.7ms | Allocations: 10072)
+Completed 200 OK in 337ms (Views: 250.2ms | ActiveRecord: 36.2ms | Allocations: 14492)
+
+
+Started GET "/annotations" for ::1 at 2021-09-08 14:12:09 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (18.1ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:14
+  Rendered annotations/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 116.5ms | Allocations: 4425)
+Completed 200 OK in 140ms (Views: 121.1ms | ActiveRecord: 18.1ms | Allocations: 4969)
+
+
+Started GET "/welcome/index" for ::1 at 2021-09-08 15:58:14 -0300
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 377.9ms | Allocations: 21570)
+Completed 200 OK in 446ms (Views: 401.7ms | ActiveRecord: 0.0ms | Allocations: 25254)
+
+
+Started GET "/" for ::1 at 2021-09-08 16:00:29 -0300
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 7137)
+Completed 200 OK in 95ms (Views: 69.6ms | ActiveRecord: 0.0ms | Allocations: 10822)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-08 16:34:17 -0300
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 529.7ms | Allocations: 29045)
+Completed 200 OK in 589ms (Views: 545.1ms | ActiveRecord: 0.0ms | Allocations: 32994)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-09 11:43:26 -0300
+  [1m[35m (28.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 358)
+  Rendered layout layouts/application.html.erb (Duration: 432.0ms | Allocations: 10745)
+Completed 500 Internal Server Error in 590ms (ActiveRecord: 0.0ms | Allocations: 14645)
+
+
+  
+ActionView::Template::Error (undefined method `pathname' for #<#<Class:0x000056302cb20068>:0x000056302cd03830 @environment=#<Sprockets::CachedEnvironment:0x7490 root="/home/italo/Documentos/Blog", paths=["/home/italo/Documentos/Blog/app/assets/config", "/home/italo/Documentos/Blog/app/assets/images", "/home/italo/Documentos/Blog/app/assets/javascripts", "/home/italo/Documentos/Blog/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actioncable-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/activestorage-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionview-6.1.4.1/lib/assets/compiled", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts", "/home/italo/Documentos/Blog/node_modules"]>, @metadata={:dependencies=>#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>, :required=>#<Set: {}>, :stubbed=>#<Set: {}>, :links=>#<Set: {}>, :to_load=>#<Set: {}>, :to_link=>#<Set: {}>}, @load_path="/home/italo/Documentos/Blog/app/assets/stylesheets", @logical_path="bootstrap_and_overrides.css", @filename="/home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less", @dirname="/home/italo/Documentos/Blog/app/assets/stylesheets", @content_type="text/css", @required=#<Set: {}>, @stubbed=#<Set: {}>, @links=#<Set: {}>, @dependencies=#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>>
+Did you mean?  path_to_image):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-09-09 11:44:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 97.7ms | Allocations: 6482)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms | Allocations: 7940)
+
+
+  
+ActionView::Template::Error (The asset "applications.css" is not present in the asset pipeline.
+):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "applications", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-09 11:45:41 -0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 358)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 7252)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms | Allocations: 11156)
+
+
+  
+ActionView::Template::Error (The asset "applications.css" is not present in the asset pipeline.
+):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "applications", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+Started POST "/__web_console/repl_sessions/b1453bd3ceca92d2d3aabd5228af67d6/trace" for ::1 at 2021-09-09 11:46:25 -0300
+Started GET "/" for ::1 at 2021-09-09 11:47:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 94.7ms | Allocations: 6403)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms | Allocations: 7896)
+
+
+  
+ActionView::Template::Error (undefined method `pathname' for #<#<Class:0x00007fe68900aa38>:0x00007fe68906c288 @environment=#<Sprockets::CachedEnvironment:0x7724 root="/home/italo/Documentos/Blog", paths=["/home/italo/Documentos/Blog/app/assets/config", "/home/italo/Documentos/Blog/app/assets/images", "/home/italo/Documentos/Blog/app/assets/javascripts", "/home/italo/Documentos/Blog/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actioncable-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/activestorage-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionview-6.1.4.1/lib/assets/compiled", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts", "/home/italo/Documentos/Blog/node_modules"]>, @metadata={:dependencies=>#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>, :required=>#<Set: {}>, :stubbed=>#<Set: {}>, :links=>#<Set: {}>, :to_load=>#<Set: {}>, :to_link=>#<Set: {}>}, @load_path="/home/italo/Documentos/Blog/app/assets/stylesheets", @logical_path="bootstrap_and_overrides.css", @filename="/home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less", @dirname="/home/italo/Documentos/Blog/app/assets/stylesheets", @content_type="text/css", @required=#<Set: {}>, @stubbed=#<Set: {}>, @links=#<Set: {}>, @dependencies=#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>>
+Did you mean?  path_to_image):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-09-09 11:51:28 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 6455)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms | Allocations: 7908)
+
+
+  
+ActionView::Template::Error (The asset "all.css" is not present in the asset pipeline.
+):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-09-09 11:52:57 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 6468)
+Completed 500 Internal Server Error in 80ms (Allocations: 7914)
+
+
+  
+ActionView::Template::Error (The asset "index.css" is not present in the asset pipeline.
+):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "index", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-09-09 11:54:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 4278)
+Completed 500 Internal Server Error in 56ms (Allocations: 5723)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2021-09-09 11:56:59 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 7898)
+Completed 500 Internal Server Error in 112ms (Allocations: 9344)
+
+
+  
+ActionView::Template::Error (undefined method `pathname' for #<#<Class:0x00007fe68908eb80>:0x00007fe6891168a0 @environment=#<Sprockets::CachedEnvironment:0x823c root="/home/italo/Documentos/Blog", paths=["/home/italo/Documentos/Blog/app/assets/config", "/home/italo/Documentos/Blog/app/assets/images", "/home/italo/Documentos/Blog/app/assets/javascripts", "/home/italo/Documentos/Blog/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actioncable-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/activestorage-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionview-6.1.4.1/lib/assets/compiled", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts", "/home/italo/Documentos/Blog/node_modules"]>, @metadata={:dependencies=>#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>, :required=>#<Set: {}>, :stubbed=>#<Set: {}>, :links=>#<Set: {}>, :to_load=>#<Set: {}>, :to_link=>#<Set: {}>}, @load_path="/home/italo/Documentos/Blog/app/assets/stylesheets", @logical_path="bootstrap_and_overrides.css", @filename="/home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less", @dirname="/home/italo/Documentos/Blog/app/assets/stylesheets", @content_type="text/css", @required=#<Set: {}>, @stubbed=#<Set: {}>, @links=#<Set: {}>, @dependencies=#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>>
+Did you mean?  path_to_image):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2021-09-09 11:58:43 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 4274)
+Completed 500 Internal Server Error in 54ms (Allocations: 5710)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2021-09-09 11:59:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 4250)
+Completed 500 Internal Server Error in 48ms (Allocations: 5686)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-114x114-precomposed.png" is not present in the asset pipeline.
+):
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+    18:     <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+    19: 
+    20:     <!-- For first- and second-generation iPad: -->
+    21:     <!-- Size should be 72 x 72 pixels -->
+  
+app/views/layouts/application.html.erb:18
+Started GET "/" for ::1 at 2021-09-09 12:01:32 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 3625)
+Completed 500 Internal Server Error in 49ms (Allocations: 4090)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-114x114-precomposed.png" is not present in the asset pipeline.
+):
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+    18:     <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+    19: 
+    20:     <!-- For first- and second-generation iPad: -->
+    21:     <!-- Size should be 72 x 72 pixels -->
+  
+app/views/layouts/application.html.erb:18
+Started GET "/" for ::1 at 2021-09-09 12:01:44 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 4192)
+Completed 500 Internal Server Error in 115ms (Allocations: 5571)
+
+
+  
+ActionView::Template::Error (The asset "favicon.ico" is not present in the asset pipeline.
+):
+    27: 
+    28:     <!-- For all other devices -->
+    29:     <!-- Size should be 32 x 32 pixels -->
+    30:     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    31: 
+    32:     <%= javascript_include_tag "application" %>
+    33: 
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for ::1 at 2021-09-09 12:03:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 103.8ms | Allocations: 6331)
+Completed 500 Internal Server Error in 137ms (Allocations: 7769)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/italo/Documentos/Blog/app/assets/config
+  /home/italo/Documentos/Blog/app/assets/images
+  /home/italo/Documentos/Blog/app/assets/javascripts
+  /home/italo/Documentos/Blog/app/assets/stylesheets
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actioncable-6.1.4.1/app/assets/javascripts
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/activestorage-6.1.4.1/app/assets/javascripts
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionview-6.1.4.1/lib/assets/compiled
+  /home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/italo/Documentos/Blog/node_modules):
+    29:     <!-- Size should be 32 x 32 pixels -->
+    30:     < %= stylesheet_link_tag :all %>
+    31: 
+    32:     <%= javascript_include_tag "application" %>
+    33: 
+    34:     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    35:     <!--[if lt IE 9]>
+  
+app/assets/javascripts/application.js:7
+app/views/layouts/application.html.erb:32
+Started GET "/" for ::1 at 2021-09-09 12:06:56 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 757)
+Completed 200 OK in 38ms (Views: 36.0ms | Allocations: 2273)
+
+
+Started GET "/path1" for ::1 at 2021-09-09 12:07:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+Started GET "/" for ::1 at 2021-09-09 12:07:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 276)
+Completed 200 OK in 46ms (Views: 44.9ms | Allocations: 759)
+
+
+Started GET "/" for ::1 at 2021-09-09 13:01:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 736)
+Completed 200 OK in 49ms (Views: 37.4ms | Allocations: 2161)
+
+
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:01:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:01:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:01:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:01:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/" for ::1 at 2021-09-09 13:02:11 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 6321)
+Completed 500 Internal Server Error in 89ms (Allocations: 7716)
+
+
+  
+ActionView::Template::Error (The asset "all.css" is not present in the asset pipeline.
+):
+    27: 
+    28:     <!-- For all other devices -->
+    29:     <!-- Size should be 32 x 32 pixels -->
+    30:     <%= stylesheet_link_tag :all %>
+    31: 
+    32: 
+    33: 
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for ::1 at 2021-09-09 13:02:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 145)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 740)
+Completed 200 OK in 62ms (Views: 53.1ms | Allocations: 2223)
+
+
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:02:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:02:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:02:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:02:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/" for ::1 at 2021-09-09 13:02:52 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 736)
+Completed 200 OK in 76ms (Views: 63.3ms | Allocations: 2177)
+
+
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:02:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/path1" for ::1 at 2021-09-09 13:03:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+Started GET "/" for ::1 at 2021-09-09 13:03:03 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 256)
+Completed 200 OK in 26ms (Views: 23.4ms | Allocations: 715)
+
+
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:03:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+Started GET "/path2" for ::1 at 2021-09-09 13:03:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/path2"):
+  
+Started GET "/" for ::1 at 2021-09-09 13:03:07 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 256)
+Completed 200 OK in 20ms (Views: 19.1ms | Allocations: 699)
+
+
+Started GET "/stylesheets/killer.css" for ::1 at 2021-09-09 13:03:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/killer.css"):
+  
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-10 08:02:23 -0300
+  [1m[35m (44.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 358)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1114)
+Completed 200 OK in 120ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 4948)
+
+
+Started GET "/" for ::1 at 2021-09-10 08:02:24 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 309)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 795)
+
+
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:02:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:02:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/path1" for ::1 at 2021-09-10 08:05:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  
+Started GET "/" for ::1 at 2021-09-10 08:05:10 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 272)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 763)
+
+
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:05:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 08:07:49 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (48.2ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 92.7ms | Allocations: 3292)
+  Rendered layout layouts/application.html.erb (Duration: 96.2ms | Allocations: 3555)
+Completed 200 OK in 144ms (Views: 53.5ms | ActiveRecord: 48.2ms | Allocations: 5512)
+
+
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:07:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 08:10:52 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (3.1ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 51.3ms | Allocations: 1677)
+  Rendered layout layouts/application.html.erb (Duration: 71.9ms | Allocations: 2247)
+Completed 200 OK in 151ms (Views: 145.4ms | ActiveRecord: 3.1ms | Allocations: 3707)
+
+
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:10:53 -0300
+Started GET "/stylesheets/scaffolds.scss" for ::1 at 2021-09-10 08:10:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/scaffolds.scss"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 08:11:27 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (9.8ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 1679)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 2249)
+Completed 200 OK in 54ms (Views: 39.4ms | ActiveRecord: 9.8ms | Allocations: 3725)
+
+
+Started GET "/stylesheets/scaffolds.scss" for ::1 at 2021-09-10 08:11:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/scaffolds.scss"):
+  
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:11:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 08:13:46 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (3.0ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 1677)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 2256)
+Completed 200 OK in 54ms (Views: 47.1ms | ActiveRecord: 3.0ms | Allocations: 3722)
+
+
+Started GET "/stylesheets/scaffolds.scss" for ::1 at 2021-09-10 08:13:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/scaffolds.scss"):
+  
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:13:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:13:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:13:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 08:14:28 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (3.0ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 1677)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 2247)
+Completed 200 OK in 58ms (Views: 52.5ms | ActiveRecord: 3.0ms | Allocations: 3713)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 08:14:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/stylesheets/application.css" for ::1 at 2021-09-10 08:14:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('511626824538614085', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (24.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('511626824538614085')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+Started GET "/annotations" for ::1 at 2021-09-10 10:31:13 -0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb
+  [1m[36mAnnotation Load (11.0ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb (Duration: 31.6ms | Allocations: 3250)
+Completed 200 OK in 76ms (Views: 31.1ms | ActiveRecord: 11.0ms | Allocations: 8392)
+
+
+Started GET "/" for ::1 at 2021-09-10 10:31:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.7ms | Allocations: 144)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 1556)
+
+
+Started GET "/" for ::1 at 2021-09-10 10:31:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.2ms | Allocations: 38)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 584)
+
+
+Started GET "/" for ::1 at 2021-09-10 10:32:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 810)
+Completed 200 OK in 42ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 2265)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 10:32:02 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 10:32:13 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (3.2ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 47.5ms | Allocations: 1675)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 1934)
+Completed 200 OK in 91ms (Views: 86.3ms | ActiveRecord: 3.2ms | Allocations: 3219)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 10:32:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/annotations/new" for ::1 at 2021-09-10 10:32:16 -0300
+Processing by AnnotationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (Duration: 44.1ms | Allocations: 1646)
+  Rendered annotations/new.html.erb within layouts/application (Duration: 60.6ms | Allocations: 2121)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 2342)
+Completed 200 OK in 130ms (Views: 73.3ms | ActiveRecord: 19.4ms | Allocations: 5931)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 10:32:16 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 10:41:13 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (6.3ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 52.7ms | Allocations: 1515)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 1733)
+Completed 200 OK in 73ms (Views: 67.1ms | ActiveRecord: 18.9ms | Allocations: 2223)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 10:41:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 10:51:21 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (3.1ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 111.7ms | Allocations: 2005)
+  Rendered layout layouts/application.html.erb (Duration: 426.4ms | Allocations: 8934)
+Completed 500 Internal Server Error in 481ms (ActiveRecord: 6.1ms | Allocations: 10361)
+
+
+  
+ActionView::Template::Error (undefined method `pathname' for #<#<Class:0x00007fe61d0c95d0>:0x00007fe61cdb3418 @environment=#<Sprockets::CachedEnvironment:0x7db4 root="/home/italo/Documentos/Blog", paths=["/home/italo/Documentos/Blog/app/assets/config", "/home/italo/Documentos/Blog/app/assets/images", "/home/italo/Documentos/Blog/app/assets/javascripts", "/home/italo/Documentos/Blog/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actioncable-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/activestorage-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionview-6.1.4.1/lib/assets/compiled", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts", "/home/italo/Documentos/Blog/node_modules"]>, @metadata={:dependencies=>#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>, :required=>#<Set: {}>, :stubbed=>#<Set: {}>, :links=>#<Set: {}>, :to_load=>#<Set: {}>, :to_link=>#<Set: {}>}, @load_path="/home/italo/Documentos/Blog/app/assets/stylesheets", @logical_path="bootstrap_and_overrides.css", @filename="/home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less", @dirname="/home/italo/Documentos/Blog/app/assets/stylesheets", @content_type="text/css", @required=#<Set: {}>, @stubbed=#<Set: {}>, @links=#<Set: {}>, @dependencies=#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>>
+Did you mean?  path_to_image):
+     9: 
+    10:   
+    11: 
+    12:     <%= stylesheet_link_tag "application", :media => "all" %>
+    13: 
+    14:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    15:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:12
+Started GET "/annotations" for ::1 at 2021-09-10 10:51:46 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (4.7ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 1676)
+  Rendered layout layouts/application.html.erb (Duration: 105.2ms | Allocations: 9417)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 4.7ms | Allocations: 10877)
+
+
+  
+ActionView::Template::Error (undefined method `pathname' for #<#<Class:0x00005572dfe9bdb0>:0x00005572e0559e18 @environment=#<Sprockets::CachedEnvironment:0x8160 root="/home/italo/Documentos/Blog", paths=["/home/italo/Documentos/Blog/app/assets/config", "/home/italo/Documentos/Blog/app/assets/images", "/home/italo/Documentos/Blog/app/assets/javascripts", "/home/italo/Documentos/Blog/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actioncable-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/activestorage-6.1.4.1/app/assets/javascripts", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionview-6.1.4.1/lib/assets/compiled", "/home/italo/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts", "/home/italo/Documentos/Blog/node_modules"]>, @metadata={:dependencies=>#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>, :required=>#<Set: {}>, :stubbed=>#<Set: {}>, :links=>#<Set: {}>, :to_load=>#<Set: {}>, :to_link=>#<Set: {}>}, @load_path="/home/italo/Documentos/Blog/app/assets/stylesheets", @logical_path="bootstrap_and_overrides.css", @filename="/home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less", @dirname="/home/italo/Documentos/Blog/app/assets/stylesheets", @content_type="text/css", @required=#<Set: {}>, @stubbed=#<Set: {}>, @links=#<Set: {}>, @dependencies=#<Set: {"environment-version", "environment-paths", "rails-env", "processors:type=text/css&file_type=text/less&pipeline=self", "file-digest:///home/italo/Documentos/Blog/app/assets/stylesheets/bootstrap_and_overrides.css.less"}>>
+Did you mean?  path_to_image):
+     9: 
+    10:   
+    11: 
+    12:     <%=stylesheet_link_tag "application", :media => "all" %>
+    13: 
+    14:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    15:     <!-- Size should be 144 x 144 pixels -->
+  
+app/views/layouts/application.html.erb:12
+Started GET "/annotations" for ::1 at 2021-09-10 10:52:04 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (8.9ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 1677)
+  Rendered layout layouts/application.html.erb (Duration: 128.8ms | Allocations: 5812)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 8.9ms | Allocations: 7273)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    12: 
+    13:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    14:     <!-- Size should be 144 x 144 pixels -->
+    15:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    16: 
+    17:     <!-- For iPhone with high-resolution Retina display: -->
+    18:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:15
+Started GET "/annotations" for ::1 at 2021-09-10 10:53:40 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (7.0ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 1677)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 2246)
+Completed 200 OK in 92ms (Views: 71.1ms | ActiveRecord: 7.0ms | Allocations: 3752)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 10:53:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/annotations" for ::1 at 2021-09-10 11:16:31 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (2.9ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 39.9ms | Allocations: 2003)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 2489)
+Completed 200 OK in 81ms (Views: 59.0ms | ActiveRecord: 7.7ms | Allocations: 3951)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-10 11:16:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/italo/Documentos/Blog/config/environment.rb:5)
+Started GET "/annotations" for ::1 at 2021-09-13 11:46:04 -0300
+  [1m[35m (22.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (6.3ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 76.0ms | Allocations: 3256)
+  Rendered layout layouts/application.html.erb (Duration: 117.8ms | Allocations: 5333)
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 6.3ms | Allocations: 9822)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"annotations"}, missing required keys: [:id]
+Did you mean?  annotation_url
+               annotations_url
+               annotations_path
+               edit_annotation_url):
+    64:             <ul class="nav nav-list">
+    65:               <li class="nav-header">Sidebar</li>
+    66:               <li><%= link_to "Inicio", root_path  %></li>
+    67:               <li><%= link_to "anotaçao", annotation_path  %></li>
+    68:               <li><%= link_to "Amigos", friends_path  %></li>
+    69:             </ul>
+    70:           </div><!--/.well -->
+  
+app/views/layouts/application.html.erb:67
+Started GET "/annotations" for ::1 at 2021-09-13 11:46:44 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (15.9ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 110.1ms | Allocations: 1682)
+  Rendered layout layouts/application.html.erb (Duration: 151.3ms | Allocations: 2193)
+Completed 200 OK in 230ms (Views: 183.3ms | ActiveRecord: 15.9ms | Allocations: 3760)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-13 11:46:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/annotations" for ::1 at 2021-09-13 11:46:50 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (8.8ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:15
+  Rendered annotations/index.html.erb within layouts/application (Duration: 87.1ms | Allocations: 1267)
+  Rendered layout layouts/application.html.erb (Duration: 102.8ms | Allocations: 1496)
+Completed 200 OK in 133ms (Views: 101.8ms | ActiveRecord: 8.8ms | Allocations: 2081)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-13 11:46:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/friends" for ::1 at 2021-09-13 11:46:55 -0300
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (5.9ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 61.6ms | Allocations: 2194)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 2451)
+Completed 200 OK in 91ms (Views: 67.7ms | ActiveRecord: 5.9ms | Allocations: 4158)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-13 11:46:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
+Started GET "/" for ::1 at 2021-09-13 11:47:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 453)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 0.0ms | Allocations: 1807)
+
+
+Started GET "/stylesheets/" for ::1 at 2021-09-13 11:47:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets"):
+  
